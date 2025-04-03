@@ -1,0 +1,353 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: rgb(230, 216, 189);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.service {
+    background: white;
+    padding: 15px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.service p {
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Ensures text stays centered */
+    align-items: center;
+    justify-content: center; /* Centers content vertically */
+    text-align: center;
+    padding: 20px 55px;
+    width: 80%;
+    position: relative;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 15% auto;
+    width: 50%;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Testimonials Section */
+#testimonials {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+/* Ensure the container holds testimonials in place */
+.testimonial-container {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Testimonials Section */
+#testimonials {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+/* Container to prevent movement */
+.testimonial-container {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Fixed height to prevent shifting */
+    overflow: hidden;
+}
+
+/* Testimonials Section */
+#testimonials {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    position: relative; /* Ensures navigation buttons stay within */
+}
+
+/* Container with fixed height */
+.testimonial-container {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Fixed height to prevent shifting */
+    overflow: hidden;
+}
+
+/* Testimonials */
+.testimonial {
+    position: absolute;
+    width: 80%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Ensures text stays centered */
+    align-items: center;
+    justify-content: center; /* Centers content vertically */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Active testimonial */
+.testimonial.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Ensure text length is controlled and centered */
+.testimonial p {
+    max-height: 80px; /* Prevents overflow */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits to 3 lines */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    margin: 0 auto;
+}
+
+/* Navigation Buttons */
+#prev-btn, #next-btn {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    
+}
+
+/* Fix button positions */
+#prev-btn {
+    left: -60px; /* Keeps it inside the section */
+}
+
+#next-btn {
+    right: -60px; /* Keeps it inside the section */
+}
+
+#prev-btn:hover, #next-btn:hover {
+    background: #e65c00;
+}
+
+
+/*Gallery Section*/
+#gallery img {
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+
+#gallery {
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    position: relative;
+}
+
+/* Ensure the container holds testimonials in place */
+.gallery-container {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Testimonials */
+.gallery {
+    position: absolute;
+    width: 80%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Ensures text stays centered */
+    align-items: center;
+    justify-content: center; /* Centers content vertically */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Active testimonial */
+.gallery.active {
+    opacity: 1;
+    position: relative;
+}
+
+
+/* Navigation Buttons */
+#prev-btn-g, #next-btn-g {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Fix button positions */
+#prev-btn-g {
+    left: -60px; /* Keeps it inside the section */
+}
+
+#next-btn-g {
+    right: -60px; /* Keeps it inside the section */
+}
+
+#prev-btn-g:hover, #next-btn-g:hover {
+    background: #e65c00;
+}
+
+#about {
+    height: 100%;
+    width: 80%;
+    justify-content: space-between;
+    padding: 10%;
+}
+
+#phone-icon {
+    max-width: 30px;
+    min-width: 20px;
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.phone-container {
+    width: 50%;
+    padding-left: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-container {
+    width: 50%;
+    padding-left: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#email-icon {
+    max-width: 30px;
+    min-width: 20px;
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.sc-icon {
+    max-width: 34px;
+    min-width: 20px;
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+}
+
+#fb-uname {
+    padding: 20px;
+    margin: 10px;
+}
+
+#socials {
+    width: 50%;
+    padding-left: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
