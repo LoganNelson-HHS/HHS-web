@@ -187,7 +187,7 @@ section {
 }
 
 /* Navigation Buttons */
-#prev-btn, #next-btn {
+#prev-btn-t, #next-btn-t {
     background: #ff6600;
     color: white;
     border: none;
@@ -200,15 +200,15 @@ section {
 }
 
 /* Fix button positions */
-#prev-btn {
+#prev-btn-t {
     left: -60px; /* Keeps it inside the section */
 }
 
-#next-btn {
+#next-btn-t {
     right: -60px; /* Keeps it inside the section */
 }
 
-#prev-btn:hover, #next-btn:hover {
+#prev-btn-t:hover, #next-btn:hover {
     background: #e65c00;
 }
 
