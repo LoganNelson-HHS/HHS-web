@@ -98,7 +98,7 @@ section {
 }
 
 /* Testimonials Section */
-#testimonials {
+.testimonials {
     text-align: center;
     padding: 40px 20px;
     background-color: #fff;
@@ -115,7 +115,7 @@ section {
 }
 
 /* Testimonials Section */
-#testimonials {
+.testimonials {
     text-align: center;
     padding: 40px 20px;
     background-color: #fff;
@@ -134,7 +134,7 @@ section {
 }
 
 /* Testimonials Section */
-#testimonials {
+.testimonials {
     text-align: center;
     padding: 40px 20px;
     background-color: #fff;
@@ -334,11 +334,6 @@ section {
     max-width: 34px;
     min-width: 20px;
     width: 100%;
-    padding: 20px;
-    margin: 10px;
-}
-
-#fb-uname {
     padding: 20px;
     margin: 10px;
 }

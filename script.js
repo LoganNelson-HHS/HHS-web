@@ -38,8 +38,8 @@ window.onclick = function(event) {
 // Testimonials Navigation with Fade Effect
 let testimonials = document.querySelectorAll(".testimonial");
 let index = 0;
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
+const prevBtn = document.getElementById("prev-btn-g");
+const nextBtn = document.getElementById("next-btn-g");
 
 function showTestimonial(i) {
     testimonials[index].classList.remove("active"); // Hide current
