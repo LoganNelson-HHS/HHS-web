@@ -98,6 +98,20 @@ section {
     cursor: pointer;
 }
 
+.modal {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.invisible {
+    display: none;
+}
+
+#quote-forem input {
+    padding: 0%;
+    margin: 20%;
+}
+
 /* Testimonials Section */
 .testimonials {
     text-align: center;

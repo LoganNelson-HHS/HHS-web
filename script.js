@@ -38,8 +38,8 @@ window.onclick = function(event) {
 // Testimonials Navigation with Fade Effect
 let testimonials = document.querySelectorAll(".testimonial");
 let index = 0;
-const prevBtnT = document.getElementById("prev-btn-t");
-const nextBtnT = document.getElementById("next-btn-t");
+const prevBtn = document.getElementById("prev-btn-g");
+const nextBtn = document.getElementById("next-btn-g");
 
 function showTestimonial(i) {
     testimonials[index].classList.remove("active"); // Hide current
@@ -51,11 +51,11 @@ function showTestimonial(i) {
 let autoSwitch = setInterval(() => showTestimonial(index + 1), 5000);
 
 // Manual buttons
-prevBtnT.addEventListener("click", () => {
+prevBtn.addEventListener("click", () => {
     showTestimonial(index - 1);
     resetAutoSwitch();
 });
-nextBtnT.addEventListener("click", () => {
+nextBtn.addEventListener("click", () => {
     showTestimonial(index + 1);
     resetAutoSwitch();
 });
@@ -94,4 +94,10 @@ nextBtnG.addEventListener("click", () => {
 function resetAutoSwitch() {
     clearInterval(autoSwitchG);
     autoSwitchG = setInterval(() => showGallery(ind + 1), 5000);
+}
+
+function openclose(id) {
+    let element = document.getElementById('myselect');
+    if (element.className.indexOf('invisible') >= 0) element.classList.remove('invisible');
+    else element.classList.add('invisible');
 }
