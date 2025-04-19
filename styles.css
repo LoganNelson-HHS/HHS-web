@@ -84,7 +84,7 @@ section {
 .modal-content {
     background: white;
     padding: 20px;
-    margin: 15% auto;
+    margin: 10% auto;
     width: 50%;
     border-radius: 5px;
     position: relative;
@@ -110,6 +110,160 @@ section {
 #quote-forem input {
     padding: 0%;
     margin: 20%;
+}
+
+#s-details {
+    background-color: lightyellow;
+    border: 2px solid black;
+    font-size: 10pt;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 95%;
+    min-width: 60%;
+    max-height: 115pt;
+    min-height: 40pt;
+}
+
+input[type="text"] {
+    background-color: lightyellow;
+    border: 2px solid black;
+    font-size: 10pt;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="email"] {
+    background-color: lightyellow;
+    border: 2px solid black;
+    font-size: 10pt;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="tel"] {
+    background-color: lightyellow;
+    border: 2px solid black;
+    font-size: 10pt;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    background-color: lightyellow;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+#sel-service-btn {
+    width: 40%;
+    height: 25pt;
+    background-color: #ff6600 ;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#sel-service-btn:hover {
+    background-color: #e65c00;
+}
+
+
+.other-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* spacing between checkbox, label, and textbox */
+    margin-bottom: 10px;
+  }
+  
+  .hidden-input {
+    display: none;
+  }
+  
+  .visible-input {
+    display: inline-block;
+  }
+
+/*#otherValue {
+    
+    position: absolute;
+}*/
+
+
+/*  checkboxes  */
+.cb-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10pt;
+    cursor: pointer;
+    font-size: 12pt;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Hide the browser's default checkbox */
+.cb-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+  /* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 2pt;
+    height: 12pt;
+    width: 12pt;
+    background-color: #eee;
+    border-radius: 5px;
+}
+  
+  /* On mouse-over, add a grey background color */
+.cb-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+  /* When the checkbox is checked, add a blue background */
+.cb-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.cb-container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+.cb-container .checkmark:after {
+    left: 3.5pt;
+    top: 2pt;
+    width: 2pt;
+    height: 5pt;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* image uploads */
+#upload-preview {
+    max-width: 25%;
 }
 
 /* Testimonials Section */

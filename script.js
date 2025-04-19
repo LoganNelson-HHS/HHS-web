@@ -101,3 +101,104 @@ function openclose(id) {
     if (element.className.indexOf('invisible') >= 0) element.classList.remove('invisible');
     else element.classList.add('invisible');
 }
+
+
+// other checkbox
+//const otherCheckbox = document.querySelector("#other");
+//const otherText = document.querySelector("#otherValue");
+//otherText.style.visibility = "hidden";
+
+//otherCheckbox.addEventListener("change", () => {
+//  if (otherCheckbox.checked) {
+//    otherText.style.visibility = "visible";
+//    otherText.value = "";
+//  } else {
+//    otherText.style.visibility = "hidden";
+//  }
+//});
+
+function toggleTextbox(checkbox) {
+    
+    const textbox = document.getElementById(`${checkbox.className}-other`);
+    textbox.className = checkbox.checked ? "visible-input" : "hidden-input";
+}
+  
+
+function previewImage(input, previewId) {
+    const file = input.files[0];
+    const preview = document.getElementById(previewId);
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.style.display = "block";
+        };
+        reader.readAsDataURL(file);
+    } else {
+        preview.src = "";
+        preview.style.display = "none";
+    }
+}
+
+//let imageCount = 1;
+//function addImageInput() {
+//    imageCount++;
+//    if (imageCount > 5) return; // Limit to 5 images, or change the number
+
+//    const container = document.getElementById("upload-img-container");
+//    const newInput = document.createElement("div");
+//    newInput.innerHTML = `
+//      <label>Image ${imageCount}:</label>
+//      <input type="file" class="img-upload" name="attachment" accept="image/*"><br><br>
+//    `;
+//    container.appendChild(newInput);
+//}
+
+document.getElementById("imgUpload").addEventListener("change", function () {
+    previewImage(this, "upload-preview");
+});
+
+document.getElementById("quote-form").addEventListener("submit", function (event) {
+    const name = document.getElementById("customer-name").value;
+//  ar-times
+    const selectedARTimes = Array.from(document.querySelectorAll('.ar_time-option:checked'))
+    .map(input => input.value);
+    document.getElementById("selected-ar-times").value = selectedARTimes.join(", ");
+
+// Engagement
+    document.getElementById("otherEng").value = "Other: " + document.getElementById("eng-option-other").value;
+    const selectedEngagement = Array.from(document.querySelectorAll('.eng-option:checked'))
+    .map(input => input.value);
+    document.getElementById("selected-engagement").value = selectedEngagement.join(", ");
+
+//other
+    document.getElementById("other").value = "Other: " + document.getElementById("service-option-other").value;
+        
+// services
+    const serviceCheckboxes = document.querySelectorAll(".service-option");
+    const oneChecked = Array.from(serviceCheckboxes).some(cb => cb.checked);
+
+    if (!oneChecked) {
+        event.preventDefault(); // Stop form submission
+        alert("Please select at least one service before submitting.");
+    }
+    
+    const engCheckboxes = document.querySelectorAll(".eng-option");
+    const engChecked = Array.from(engCheckboxes).some(cb => cb.checked);
+
+    if (!engChecked) {
+        event.preventDefault(); // Stop form submission
+        alert("Please select at least one engagement source before submitting.");
+    } 
+
+    const selectedServices = Array.from(document.querySelectorAll('.service-option:checked'))
+    .map(input => input.value);
+
+    document.getElementById("selected-services").value = selectedServices.join(", ");
+    const serviceList = selectedServices.join(", ");
+ 
+    const message = `Howdy ${name},   | --- |   Thanks for reaching out to Howdy Home Services!\nWe're excited to help you with your:  ${serviceList} needs.   | --- |   We'll get back to you shortly to confirm the details.   |---|   Cheers,\nThe Howdy Team 🤠`;
+    document.getElementById("autoresponse").value = message;
+  });
+  

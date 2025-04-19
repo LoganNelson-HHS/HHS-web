@@ -200,12 +200,14 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Request a Quote</h2>
-            <form id="quote-form" action="https://formsubmit.co/logan.nelson@howdyhome-services.com" method="POST">
+            <form id="quote-form" action="https://formsubmit.co/logan.nelson@howdyhome-services.com" method="POST" enctype=multipart/form-data>
+                <input type="hidden" name="_template" value="table">
+                
                 <!--Contact Details -->
                 
                 <h4>Contact Details</h4>
                 <label for="name">Name:</label><br>
-                <input type="text" name="name" required><br><br>
+                <input type="text" name="name" id="customer-name" required><br><br>
 
                 <label for="email">Email:</label><br>
                 <input type="email" name="email" required><br><br>
@@ -223,7 +225,7 @@
                 </div><br>
                 <div>
                     <label for="postal-code">ZIP or postal code (optional)</label><br>
-                    <input class="postal-code" id="postal-code" name="postal-code" autocomplete="postal-code" enterkeyhint="next">
+                    <input type="text" class="postal-code" id="postal-code" name="postal-code" autocomplete="postal-code" enterkeyhint="next">
                 </div><br>
                 <div>
                     <label for="city">City</label><br>
@@ -232,43 +234,147 @@
 
                 <!-- Service -->
                 <h4>Service Details</h4>
-                <input type="button" value="Select Service:" onclick="openclose('myselect')"><br>
-                <div name="service" class="invisible" id="myselect" multiple>
-                    <p><label>Gutter Cleaning <input type="checkbox"></label></p>
-                    <p><label>Gutter Whitening <input type="checkbox"></label></p>
-                    <p><label>Pressure Washing <input type="checkbox"></label></p>
-                    <p><label>Soft Washing <input type="checkbox"></label></p>
-                    <p><label>Window Washing <input type="checkbox"></label></p>
+                <input type="button" id="sel-service-btn" value="Select Service" onclick="openclose('myselect')"><br><br>
+                <div role="button" name="service" class="invisible" id="myselect" aria-required="true" multiple>
+                    
+                    <label class="cb-container">Gutter Cleaning
+                        <input class="service-option" type="checkbox" value="Gutter Cleaning">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="cb-container">Gutter Whitening
+                        <input class="service-option" type="checkbox" value="Gutter Whitening">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="cb-container">Pressure Washing
+                        <input class="service-option" type="checkbox" value="Pressure Washing">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="cb-container">Soft Washing
+                        <input class="service-option" type="checkbox" value="Soft Washing">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="cb-container">Window Washing
+                        <inpu class="service-option" type="checkbox" value="Window Washing">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <div class="other-container">
+                        <label class="cb-container">Other
+                        <input class="service-option" type="checkbox" id="other" onclick="toggleTextbox(this)">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="text" class="hidden-input" id="service-option-other" placeholder="Enter other service" aria-label="Other Service">
+                    </div>
+                    
                 </div><br>
                 
                 <label for="details">Please provide as much information as you can:</label><br>
-                <textarea required name="details" id="s-details">
+                <textarea name="details" id="s-details" required></textarea><br>
+                
+                <h4>Your Availability</h4>
+                <label for="ar-times">What are your preferred arrival times? (optional)</label><br><br>
+                <div class="ar-times">
+
+                <label class="cb-container">Any time
+                    <input class="ar_time-option" type="checkbox" value="Any Time">
+                    <span class="checkmark"></span>
+                </label>
+
+
+                <label class="cb-container">Morning
+                    <input class="ar_time-option" type="checkbox" value="Morning">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="cb-container">Afternoon
+                    <input class="ar_time-option" type="checkbox" value="Afternoon">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="cb-container">Evening
+                    <input class="ar_time-option" type="checkbox" value="Evening">
+                    <span class="checkmark"></span>
+                </label>
+
+                </div>
+
+                
+                
+                <h4>How did you find us?</h4><br>
+                <div name="engagement" class="engagement-container" aria-required="true">
+
+                    <label class="cb-container">Facebook Group
+                        <input class="eng-option" type="checkbox" value="Facebook Group">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="cb-container">Facebook Ad
+                        <input class="eng-option" type="checkbox" value="Facebook Ad">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="cb-container">Nextdoor
+                        <input class="eng-option" type="checkbox" value="Nextdoor">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="cb-container">Google
+                        <input class="eng-option" type="checkbox" value="Google">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="cb-container">Yard Sign
+                        <input class="eng-option" type="checkbox" value="Yard Sign">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="cb-container">Yelp
+                        <input class="eng-option" type="checkbox" value="Yelp">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="cb-container">Referral
+                        <input class="eng-option" type="checkbox" value="Referral">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="cb-container">Email
+                        <input class="eng-option" type="checkbox" value="Email">
+                        <span class="checkmark"></span>
+                    </label>
                     
-                </textarea><br>
-                
-                <h4>What are your preferred arrival times?</h4>
-                <div name="ar-times">
-                    <p><label>Any time <input type="checkbox"></label></p>
-                    <p><label>Morning <input type="checkbox"></label></p>
-                    <p><label>Afternoon <input type="checkbox"></label></p>
-                    <p><label>Evening <input type="checkbox"></label></p>
-                </div>
-                
-                <h4>How did you find us?</h4>
-                <div name="engagement">
-                    <p><label>Facebook <input type="checkbox"></label></p>
-                    <p><label>Nexdoor <input type="checkbox"></label></p>
-                    <p><label>Google <input type="checkbox"></label></p>
-                    <p><label>Yard Sign <input type="checkbox"></label></p>
-                    <p><label>Referral <input type="checkbox"></label></p>
-                    <p><label>Email <input type="checkbox"></label></p>
+                    <div class="other-container">
+                        <label class="cb-container">Other
+                        <input class="eng-option" type="checkbox" id="otherEng" onclick="toggleTextbox(this)">
+                        <span class="checkmark"></span>
+                        </label>
+                        <input type="text" class="hidden-input" id="eng-option-other" placeholder="Enter other source" aria-label="Other Engagement">
+                    </div>
+                    
+                    
                 </div>
 
-                <h4>Upload Imaes</h4>
-                <label for="imgUpload" class="custom-file-upload">Share images of the work to be done</label>
-                <input type="file" id="imgUpload" accept="image/*">
-                <img id="upload-preview" class="upload-preview" style="display: none;" />
+                <h4>Upload Images (optional)</h4>
+                <div id="upload-img-container">
+                    <label for="imgUpload" class="custom-file-upload">Share images of the work to be done (currently limited to 1 upload)</label><br><br>
+                    <input name="attachment" type="file" id="imgUpload" multiple accept="image/*"><br><br>
+                    <img id="upload-preview" class="upload-preview" style="display: none;" />
+                    
+                    <!--<button type="button" onclick="addImageInput()">Add Another Image</button>-->
+                </div>
 
+
+
+
+                <input type="hidden" name="Selected-Engagement" id="selected-engagement">
+                <input type="hidden" name="Arrival-Times" id="selected-ar-times">
+                <input type="hidden" name="Selected-Services" id="selected-services">
+                <input type="hidden" name="_autoresponse" id="autoresponse">
+                <!--   <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">    -->
                 <button type="submit">Submit</button>
             </form>
         </div>
