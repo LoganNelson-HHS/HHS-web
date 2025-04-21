@@ -144,22 +144,22 @@
             <button id="prev-btn-t">&#10094;</button> 
             <div class="testimonial active">
                 <p>"awesome job! Cleaned my gutters and power washed my house and drive way. Very respectful, highly recommend this man!"</p>
-                <h4>- Graham W.</h4>
+                <h3>- Graham W.</h3>
             </div>
 
             <div class="testimonial">
                 <p>"Logan was extremely professional, he showed up on time and prepared. I would recommend his services to anyone and would use him again if needed. Don't hesitate to give him a call."</p>
-                <h4>- Monica Q.</h4>
+                <h3>- Monica Q.</h3>
             </div>
 
             <!--
             <div class="testimonial">
                 <p>"Great work on our electrical issues. Fixed everything quickly!"</p>
-                <h4>- Mike D.</h4>
+                <h3>- Mike D.</h3>
             </div>
             <div class="testimonial">
                 <p>"Excellent HVAC maintenance. Will definitely use them again!"</p>
-                <h4>- Emily R.</h4>                                                                                     
+                <h3>- Emily R.</h3>                                                                                     
             </div>-->
             <button id="next-btn-t">&#10095;</button>                                                                    
         </div>
@@ -205,7 +205,7 @@
                 
                 <!--Contact Details -->
                 
-                <h4>Contact Details</h4>
+                <h3>Contact Details</h3>
                 <label for="name">Name:</label><br>
                 <input type="text" name="name" id="customer-name" required><br><br>
 
@@ -217,7 +217,7 @@
                 
 
                 <!-- Address -->
-                <h4>Address</h4>
+                <h3>Address</h3>
                 <div>
                     <label for="street-address">Street address</label><br>
                     <input type="text" id="street-address" name="street-address" autocomplete="street-address" required enterkeyhint="next"></input>
@@ -233,9 +233,27 @@
                 </div>
 
                 <!-- Service -->
-                <h4>Service Details</h4>
-                <input type="button" id="sel-service-btn" value="Select Service" onclick="openclose('myselect')"><br><br>
-                <div role="button" name="service" class="invisible" id="myselect" aria-required="true" multiple>
+                <h3>Service Details</h3>
+                <label for="myselect">What Service(s) are you interested in?</label>
+                <button type="button" class="sel-btn" id="sel-service-btn" value="Select Service" onclick="openclose('myselect')">
+                    Select Service
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+                    <path fill="#ffffff" opacity="1.000000" stroke="none" 
+                        d="
+                    M38.747475,27.752295 
+                        C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
+                        C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
+                        C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
+                        C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
+                        C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
+                        C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
+                        C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
+                    z"/>
+                    </svg>
+
+                </button>
+                <div role="button" name="service" class="invisible sel-opt-container" id="myselect" aria-required="true" multiple>
                     
                     <label class="cb-container">Gutter Cleaning
                         <input class="service-option" type="checkbox" value="Gutter Cleaning">
@@ -275,37 +293,84 @@
                 <label for="details">Please provide as much information as you can:</label><br>
                 <textarea name="details" id="s-details" required></textarea><br>
                 
-                <h4>Your Availability</h4>
-                <label for="ar-times">What are your preferred arrival times? (optional)</label><br><br>
-                <div class="ar-times">
 
-                <label class="cb-container">Any time
-                    <input class="ar_time-option" type="checkbox" value="Any Time">
-                    <span class="checkmark"></span>
-                </label>
+                <div class="ar-time-container">
+                    <div class="ar-time-header">
+
+                        <h3>Your Availability</h3>
+                        <label for="ar-times">What are your preferred arrival times? (optional)</label>
+                        <button type="button" class="sel-btn" id="sel-time-btn" value="Select Preferred Time" onclick="openclose('sel-ar-time')">
+                            Select Preferred Times
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+                                <path fill="#ffffff" opacity="1.000000" stroke="none" 
+                                    d="
+                                M38.747475,27.752295 
+                                    C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
+                                    C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
+                                    C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
+                                    C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
+                                    C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
+                                    C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
+                                    C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
+                                z"/>
+                            </svg>
+                        </button>
+
+                    </div>
+                    
+                    
+                    <div role="button" class="invisible ar-times sel-opt-container" id="sel-ar-time" aria-required="false" multiple>
+
+                        <label class="cb-container">Any time
+                            <input class="ar_time-option" type="checkbox" value="Any Time">
+                            <span class="checkmark"></span>
+                        </label>
 
 
-                <label class="cb-container">Morning
-                    <input class="ar_time-option" type="checkbox" value="Morning">
-                    <span class="checkmark"></span>
-                </label>
+                        <label class="cb-container">Morning
+                            <input class="ar_time-option" type="checkbox" value="Morning">
+                            <span class="checkmark"></span>
+                        </label>
 
-                <label class="cb-container">Afternoon
-                    <input class="ar_time-option" type="checkbox" value="Afternoon">
-                    <span class="checkmark"></span>
-                </label>
+                        <label class="cb-container">Afternoon
+                            <input class="ar_time-option" type="checkbox" value="Afternoon">
+                            <span class="checkmark"></span>
+                        </label>
 
-                <label class="cb-container">Evening
-                    <input class="ar_time-option" type="checkbox" value="Evening">
-                    <span class="checkmark"></span>
-                </label>
+                        <label class="cb-container">Evening
+                            <input class="ar_time-option" type="checkbox" value="Evening">
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </div>
 
                 </div>
+                
 
                 
                 
-                <h4>How did you find us?</h4><br>
-                <div name="engagement" class="engagement-container" aria-required="true">
+                <h3>How did you find us?</h3>
+                <label for="engagement-container">From what source did you hear about us?</label>
+                <button type="button" class="sel-btn" id="sel-eng-btn" value="Select Engagement Source" onclick="openclose('sel-eng')">
+                    Select Engagement Source
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+                    <path fill="#ffffff" opacity="1.000000" stroke="none" 
+                        d="
+                    M38.747475,27.752295 
+                        C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
+                        C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
+                        C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
+                        C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
+                        C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
+                        C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
+                        C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
+                    z"/>
+                    </svg>
+
+                </button>
+                <div role="button" name="engagement" id="sel-eng" class="invisible engagement-container sel-opt-container" aria-required="true">
 
                     <label class="cb-container">Facebook Group
                         <input class="eng-option" type="checkbox" value="Facebook Group">
@@ -358,7 +423,7 @@
                     
                 </div>
 
-                <h4>Upload Images (optional)</h4>
+                <h3>Upload Images (optional)</h3>
                 <div id="upload-img-container">
                     <label for="imgUpload" class="custom-file-upload">Share images of the work to be done (currently limited to 1 upload)</label><br><br>
                     <input name="attachment" type="file" id="imgUpload" multiple accept="image/*"><br><br>

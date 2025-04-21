@@ -97,7 +97,8 @@ function resetAutoSwitch() {
 }
 
 function openclose(id) {
-    let element = document.getElementById('myselect');
+    console.log(id);
+    let element = document.getElementById(id);
     if (element.className.indexOf('invisible') >= 0) element.classList.remove('invisible');
     else element.classList.add('invisible');
 }

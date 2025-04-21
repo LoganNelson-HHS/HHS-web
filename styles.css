@@ -153,22 +153,51 @@ input[type="checkbox"] {
     border: 1px solid black;
     padding: 5px;
     border-radius: 2px;
+    font-size: 10pt;
 }
 
-#sel-service-btn {
-    width: 40%;
+.sel-btn {
+    position: relative;
+    width: 45%;
     height: 25pt;
     background-color: #ff6600 ;
     border-radius: 5px;
     color: white;
     border: none;
     cursor: pointer;
+    display: flex;
+    margin-left: 0%;
+    margin-top: .5rem;
+    margin-bottom: .1rem;
+    justify-content: space-between;
+    padding-top: .55rem;
+    padding-bottom: 1rem;
+    font-size: 12pt;
 }
 
-#sel-service-btn:hover {
+.sel-btn:hover {
     background-color: #e65c00;
 }
 
+.sel-opt-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 0%;
+    width: 40%;
+    padding: 1rem;
+    padding-bottom: .25rem;
+}
+
+#Layer_1 {
+    position: relative;
+    top: 4px;
+    width: .6rem;
+    height: .6rem;
+}
+
+.ar-time-header {
+    position: relative;
+}
 
 .other-container {
     display: flex;
