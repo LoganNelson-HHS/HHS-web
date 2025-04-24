@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Howdy Home Services | Pressure Washing, Gutter Cleaning, and More | Spring, Tx</title>
+    <link rel="stylesheet" href="styles-1.css">
     <link rel="icon" type="image/x-icon" href="imgs/app-icon 192.ico">
 </head>
 <body>
@@ -198,252 +198,267 @@
     <!-- Quote Form Modal -->
     <div id="quote-modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Request a Quote</h2>
-            <form id="quote-form" action="https://formsubmit.co/logan.nelson@howdyhome-services.com" method="POST" enctype=multipart/form-data>
-                <input type="hidden" name="_template" value="table">
-                
-                <!--Contact Details -->
-                
-                <h3>Contact Details</h3>
-                <label for="name">Name:</label><br>
-                <input type="text" name="name" id="customer-name" required><br><br>
-
-                <label for="email">Email:</label><br>
-                <input type="email" name="email" required><br><br>
-
-                <label for="phone">Phone number:</label><br>
-                <input type="tel" name="phone" required><br>
-                
-
-                <!-- Address -->
-                <h3>Address</h3>
-                <div>
-                    <label for="street-address">Street address</label><br>
-                    <input type="text" id="street-address" name="street-address" autocomplete="street-address" required enterkeyhint="next"></input>
-                  
-                </div><br>
-                <div>
-                    <label for="postal-code">ZIP or postal code (optional)</label><br>
-                    <input type="text" class="postal-code" id="postal-code" name="postal-code" autocomplete="postal-code" enterkeyhint="next">
-                </div><br>
-                <div>
-                    <label for="city">City</label><br>
-                    <input required type="text" id="city" name="city" autocomplete="address-level2" enterkeyhint="next">
-                </div>
-
-                <!-- Service -->
-                <h3>Service Details</h3>
-                <label for="myselect">What Service(s) are you interested in?</label>
-                <button type="button" class="sel-btn" id="sel-service-btn" value="Select Service" onclick="openclose('myselect')">
-                    Select Service
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
-                    <path fill="#ffffff" opacity="1.000000" stroke="none" 
-                        d="
-                    M38.747475,27.752295 
-                        C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
-                        C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
-                        C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
-                        C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
-                        C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
-                        C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
-                        C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
-                    z"/>
-                    </svg>
-
-                </button>
-                <div role="button" name="service" class="invisible sel-opt-container" id="myselect" aria-required="true" multiple>
+            <div class="modal-container">
+                <span class="close">&times;</span>
+                <h2>Request a Quote</h2>
+                <form id="quote-form" action="https://formsubmit.co/logan.nelson@howdyhome-services.com" method="POST" enctype=multipart/form-data>
+                    <input type="hidden" name="_template" value="table">
                     
-                    <label class="cb-container">Gutter Cleaning
-                        <input class="service-option" type="checkbox" value="Gutter Cleaning">
-                        <span class="checkmark"></span>
-                    </label>
+                    <!--Contact Details -->
                     
-                    <label class="cb-container">Gutter Whitening
-                        <input class="service-option" type="checkbox" value="Gutter Whitening">
-                        <span class="checkmark"></span>
-                    </label>
-                    
-                    <label class="cb-container">Pressure Washing
-                        <input class="service-option" type="checkbox" value="Pressure Washing">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="cb-container">Soft Washing
-                        <input class="service-option" type="checkbox" value="Soft Washing">
-                        <span class="checkmark"></span>
-                    </label>
-                    
-                    <label class="cb-container">Window Washing
-                        <inpu class="service-option" type="checkbox" value="Window Washing">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <div class="other-container">
-                        <label class="cb-container">Other
-                        <input class="service-option" type="checkbox" id="other" onclick="toggleTextbox(this)">
-                        <span class="checkmark"></span>
-                    </label>
-                    <input type="text" class="hidden-input" id="service-option-other" placeholder="Enter other service" aria-label="Other Service">
+                    <h3>Contact Details</h3>
+                    <div class="form-line">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="customer-name" required>
                     </div>
                     
-                </div><br>
-                
-                <label for="details">Please provide as much information as you can:</label><br>
-                <textarea name="details" id="s-details" required></textarea><br>
-                
+                    <div class="form-line">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-line">
+                        <label for="phone">Phone number:</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                    
+                    
 
-                <div class="ar-time-container">
-                    <div class="ar-time-header">
+                    <!-- Address -->
+                    <h3>Address</h3>
+                    <div class="form-line">
+                        <label for="street-address">Street address</label>
+                        <input type="text" id="street-address" name="street-address" autocomplete="street-address" required enterkeyhint="next"></input>
+                    
+                    </div>
+                    <div class="form-line">
+                        <label for="postal-code">ZIP or postal code (optional)</label>
+                        <input type="text" class="postal-code" id="postal-code" name="postal-code" autocomplete="postal-code" enterkeyhint="next">
+                    </div>
+                    <div class="form-line">
+                        <label for="city">City</label>
+                        <input required type="text" id="city" name="city" autocomplete="address-level2" enterkeyhint="next">
+                    </div>
 
-                        <h3>Your Availability</h3>
-                        <label for="ar-times">What are your preferred arrival times? (optional)</label>
-                        <button type="button" class="sel-btn" id="sel-time-btn" value="Select Preferred Time" onclick="openclose('sel-ar-time')">
-                            Select Preferred Times
+                    <!-- Service -->
+                    <h3>Service Details</h3>
+
+                    <div class="form-line">
+                        <label for="myselect">What Service(s) are you interested in?</label>
+                        <button type="button" class="sel-btn" id="sel-service-btn" value="Select Service" onclick="openclose('myselect')">
+                            Select Service
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
-                                <path fill="#ffffff" opacity="1.000000" stroke="none" 
-                                    d="
-                                M38.747475,27.752295 
-                                    C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
-                                    C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
-                                    C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
-                                    C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
-                                    C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
-                                    C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
-                                    C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
-                                z"/>
+                            width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+                            <path fill="#ffffff" opacity="1.000000" stroke="none" 
+                                d="
+                            M38.747475,27.752295 
+                                C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
+                                C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
+                                C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
+                                C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
+                                C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
+                                C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
+                                C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
+                            z"/>
                             </svg>
+
                         </button>
+                        <div role="button" name="service" class="invisible sel-opt-container" id="myselect" aria-required="true" multiple>
+                            
+                            <label class="cb-container">Gutter Cleaning
+                                <input class="service-option" type="checkbox" value="Gutter Cleaning">
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                            <label class="cb-container">Gutter Whitening
+                                <input class="service-option" type="checkbox" value="Gutter Whitening">
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                            <label class="cb-container">Pressure Washing
+                                <input class="service-option" type="checkbox" value="Pressure Washing">
+                                <span class="checkmark"></span>
+                            </label>
 
+                            <label class="cb-container">Soft Washing
+                                <input class="service-option" type="checkbox" value="Soft Washing">
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                            <label class="cb-container">Window Washing
+                                <inpu class="service-option" type="checkbox" value="Window Washing">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <div class="other-container">
+                                <label class="cb-container">Other
+                                <input class="service-option" type="checkbox" id="other" onclick="toggleTextbox(this)">
+                                <span class="checkmark"></span>
+                            </label>
+                            <input type="text" class="hidden-input" id="service-option-other" placeholder="Enter other service" aria-label="Other Service">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-line">
+                        <label for="details">Please provide as much information as you can:</label>
+                        <textarea name="details" id="s-details" required></textarea>
                     </div>
                     
                     
-                    <div role="button" class="invisible ar-times sel-opt-container" id="sel-ar-time" aria-required="false" multiple>
 
-                        <label class="cb-container">Any time
-                            <input class="ar_time-option" type="checkbox" value="Any Time">
-                            <span class="checkmark"></span>
-                        </label>
+                    <h3>Your Availability</h3>
+                            
+
+                            <div class="form-line">
+                                <label for="ar-times">What are your preferred arrival times? (optional)</label>
+                                <button type="button" class="sel-btn" id="sel-time-btn" value="Select Preferred Time" onclick="openclose('sel-ar-time')">
+                                    Select Preferred Times
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+                                        <path fill="#ffffff" opacity="1.000000" stroke="none" 
+                                            d="
+                                        M38.747475,27.752295 
+                                            C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
+                                            C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
+                                            C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
+                                            C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
+                                            C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
+                                            C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
+                                            C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
+                                        z"/>
+                                    </svg>
+                                </button>
+                                <div role="button" class="invisible ar-times sel-opt-container" id="sel-ar-time" aria-required="false" multiple>
+
+                                    <label class="cb-container">Any time
+                                        <input class="ar_time-option" type="checkbox" value="Any Time">
+                                        <span class="checkmark"></span>
+                                    </label>
 
 
-                        <label class="cb-container">Morning
-                            <input class="ar_time-option" type="checkbox" value="Morning">
-                            <span class="checkmark"></span>
-                        </label>
+                                    <label class="cb-container">Morning
+                                        <input class="ar_time-option" type="checkbox" value="Morning">
+                                        <span class="checkmark"></span>
+                                    </label>
 
-                        <label class="cb-container">Afternoon
-                            <input class="ar_time-option" type="checkbox" value="Afternoon">
-                            <span class="checkmark"></span>
-                        </label>
+                                    <label class="cb-container">Afternoon
+                                        <input class="ar_time-option" type="checkbox" value="Afternoon">
+                                        <span class="checkmark"></span>
+                                    </label>
 
-                        <label class="cb-container">Evening
-                            <input class="ar_time-option" type="checkbox" value="Evening">
-                            <span class="checkmark"></span>
-                        </label>
+                                    <label class="cb-container">Evening
+                                        <input class="ar_time-option" type="checkbox" value="Evening">
+                                        <span class="checkmark"></span>
+                                    </label>
 
+                                </div>
+
+                            </div>
+                    
+                    
+                    <h3>How did you find us?</h3>
+
+                    <div class="form-line">
+                        <label for="engagement-container">From what source did you hear about us?</label>
+                        <button type="button" class="sel-btn" id="sel-eng-btn" value="Select Engagement Source" onclick="openclose('sel-eng')">
+                            Select Engagement Source
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+                            <path fill="#ffffff" opacity="1.000000" stroke="none" 
+                                d="
+                            M38.747475,27.752295 
+                                C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
+                                C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
+                                C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
+                                C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
+                                C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
+                                C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
+                                C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
+                            z"/>
+                            </svg>
+
+                        </button>
+                        <div role="button" name="engagement" id="sel-eng" class="invisible engagement-container sel-opt-container" aria-required="true">
+
+                            <label class="cb-container">Facebook Group
+                                <input class="eng-option" type="checkbox" value="Facebook Group">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="cb-container">Facebook Ad
+                                <input class="eng-option" type="checkbox" value="Facebook Ad">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="cb-container">Nextdoor
+                                <input class="eng-option" type="checkbox" value="Nextdoor">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="cb-container">Google
+                                <input class="eng-option" type="checkbox" value="Google">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="cb-container">Yard Sign
+                                <input class="eng-option" type="checkbox" value="Yard Sign">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="cb-container">Yelp
+                                <input class="eng-option" type="checkbox" value="Yelp">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="cb-container">Referral
+                                <input class="eng-option" type="checkbox" value="Referral">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="cb-container">Email
+                                <input class="eng-option" type="checkbox" value="Email">
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                            <div class="other-container">
+                                <label class="cb-container">Other
+                                <input class="eng-option" type="checkbox" id="otherEng" onclick="toggleTextbox(this)">
+                                <span class="checkmark"></span>
+                                </label>
+                                <input type="text" class="hidden-input" id="eng-option-other" placeholder="Enter other source" aria-label="Other Engagement">
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    
+
+                    <h3>Upload Images (optional)</h3>
+                    <div id="upload-img-container" class="form-line">
+                        <label for="imgUpload" class="custom-file-upload">Share images of the work to be done (currently limited to 1 upload)</label><br><br>
+                        <input name="attachment" type="file" id="imgUpload" multiple accept="image/*"><br><br>
+                        <img id="upload-preview" class="upload-preview" style="display: none;" />
+                        
+                        <!--<button type="button" onclick="addImageInput()">Add Another Image</button>-->
                     </div>
 
-                </div>
-                
-
-                
-                
-                <h3>How did you find us?</h3>
-                <label for="engagement-container">From what source did you hear about us?</label>
-                <button type="button" class="sel-btn" id="sel-eng-btn" value="Select Engagement Source" onclick="openclose('sel-eng')">
-                    Select Engagement Source
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
-                    <path fill="#ffffff" opacity="1.000000" stroke="none" 
-                        d="
-                    M38.747475,27.752295 
-                        C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
-                        C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
-                        C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
-                        C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
-                        C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
-                        C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
-                        C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
-                    z"/>
-                    </svg>
-
-                </button>
-                <div role="button" name="engagement" id="sel-eng" class="invisible engagement-container sel-opt-container" aria-required="true">
-
-                    <label class="cb-container">Facebook Group
-                        <input class="eng-option" type="checkbox" value="Facebook Group">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="cb-container">Facebook Ad
-                        <input class="eng-option" type="checkbox" value="Facebook Ad">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="cb-container">Nextdoor
-                        <input class="eng-option" type="checkbox" value="Nextdoor">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="cb-container">Google
-                        <input class="eng-option" type="checkbox" value="Google">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="cb-container">Yard Sign
-                        <input class="eng-option" type="checkbox" value="Yard Sign">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="cb-container">Yelp
-                        <input class="eng-option" type="checkbox" value="Yelp">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="cb-container">Referral
-                        <input class="eng-option" type="checkbox" value="Referral">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="cb-container">Email
-                        <input class="eng-option" type="checkbox" value="Email">
-                        <span class="checkmark"></span>
-                    </label>
-                    
-                    <div class="other-container">
-                        <label class="cb-container">Other
-                        <input class="eng-option" type="checkbox" id="otherEng" onclick="toggleTextbox(this)">
-                        <span class="checkmark"></span>
-                        </label>
-                        <input type="text" class="hidden-input" id="eng-option-other" placeholder="Enter other source" aria-label="Other Engagement">
-                    </div>
-                    
-                    
-                </div>
-
-                <h3>Upload Images (optional)</h3>
-                <div id="upload-img-container">
-                    <label for="imgUpload" class="custom-file-upload">Share images of the work to be done (currently limited to 1 upload)</label><br><br>
-                    <input name="attachment" type="file" id="imgUpload" multiple accept="image/*"><br><br>
-                    <img id="upload-preview" class="upload-preview" style="display: none;" />
-                    
-                    <!--<button type="button" onclick="addImageInput()">Add Another Image</button>-->
-                </div>
 
 
 
+                    <input type="hidden" name="Selected-Engagement" id="selected-engagement">
+                    <input type="hidden" name="Arrival-Times" id="selected-ar-times">
+                    <input type="hidden" name="Selected-Services" id="selected-services">
+                    <input type="hidden" name="_autoresponse" id="autoresponse">
+                    <!--   <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">    -->
+                    <button id="submit-btn" type="submit">Submit</button>
+                </form>
 
-                <input type="hidden" name="Selected-Engagement" id="selected-engagement">
-                <input type="hidden" name="Arrival-Times" id="selected-ar-times">
-                <input type="hidden" name="Selected-Services" id="selected-services">
-                <input type="hidden" name="_autoresponse" id="autoresponse">
-                <!--   <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">    -->
-                <button type="submit">Submit</button>
-            </form>
+            </div>
+            
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script-1.js"></script>
 </body>
 </html>
