@@ -4,144 +4,688 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Howdy Home Services | Pressure Washing, Gutter Cleaning, and More | Spring, Tx</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles-1.css">
     <link rel="icon" type="image/x-icon" href="imgs/app-icon 192.ico">
+    <script src="scripts/script-1.js" defer></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet">
+
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWpz8KUbDbMz5l4iUGg-e3yirqrPgMXxs&loading=async&libraries=places&callback=initMap">
+    </script>
 </head>
 <body>
 
     <!-- Header Section -->
-    <header>
-        <img id="logo" src="imgs/Howdy HS logo m1 copy.png" alt="" class="responsive">
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button id="quote-btn">Request a Quote</button></li>
-            </ul>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-data">
+                <a href="#hero" class="nav-logo nav-link-cf">
+                    <img src="imgs/Howdy HS logo m1 copy.png" alt="">
+                </a>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav-burger"></i>
+                    <i class="ri-close-line nav-close"></i>
+                </div>
+            </div>
+
+
+            
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-link-active"><a href="#hero" class="nav-link-cf nav-link  nav-link-title">Home</a></li>
+
+                    <!-- Services Tab -->
+                    <li class="dropdown-item noDD">
+                        <div class="nav-link dropdown-button">
+                            <a href="#services" class="nav-link-cf nav-link-title">Services</a> 
+                        </div>
+                    </li>
+
+                    <li class="dropdown-item noDD">
+                        <div class="nav-link dropdown-button">
+                            <a href="#gallery-section" class="nav-link-cf nav-link-title">Gallery</a> 
+                        </div>
+                    </li>
+
+                    <!-- About Tab -->
+                    <li class="dropdown-item">
+                        <div class="nav-link dropdown-button">
+                            <p class="nav-link-title">About</p>
+                            <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                        </div>
+
+                        
+                        <div class="dropdown-container">
+                            <div class="dropdown-content">
+                                <!-- About Page -->
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-info-card-line"></i>
+                                    </div>
+
+                                    <a href="#about" class="nav-link-cf">
+                                        <span class="dropdown-title">About</span>
+                                    </a>
+                                    
+                                    <p class="dropdown-description">
+                                        What is Howdy Home Services?
+                                    </p>
+                                </div>
+
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+
+                                    <a href="#" class="">
+                                        <span class="dropdown-title">Service Area</span>
+                                    </a>
+                                
+                                    <p class="dropdown-description">
+                                        Where is Howdy Home Services?
+                                    </p>
+                                </div>
+
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-money-dollar-circle-line"></i>
+                                    </div>
+
+                                    <a href="#special-discounts" class="nav-link-cf">
+                                        <span class="dropdown-title">Special Discounts</span>
+                                    </a>
+                                
+                                    <p class="dropdown-description">
+                                        Find out more about the special discounts we offer and see if you qualify.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <!-- Resources Tab -->
+                    <li class="dropdown-item">
+                        <div class="nav-link dropdown-button">
+                            <p class="nav-link-title">Resources</p>
+                            <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                        </div>
+
+                        
+                        <div class="dropdown-container">
+                            <div class="dropdown-content">
+                                <!-- Testimonials Page -->
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-user-smile-line"></i>
+                                    </div>
+
+                                    <a href="#testimonial-section" class="nav-link-cf">
+                                        <span class="dropdown-title">Testimonials</span>
+                                    </a>
+                                    
+                                
+                                    <p class="dropdown-description">
+                                        How is Howdy Home Services?
+                                    </p>
+                                </div>
+                                
+                                <!-- B&A Tool Page -->
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-image-edit-fill"></i>
+                                    </div>
+
+                                    <a href="#" class="">
+                                        <span class="dropdown-title">B&A Tool</span>
+                                    </a>
+                                
+                                    <p class="dropdown-description">
+                                        Use our Free, Custom,  Before & After image generator.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </li>
+                    <!-- contact tab -->
+                    <li class="dropdown-item">
+                        <div class="nav-link dropdown-button">
+                            <p class="nav-link-title">Contact</p> 
+                            <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                        </div>
+
+                        
+                        <div class="dropdown-container">
+                            <div class="dropdown-content">
+                                <!-- Connect Page -->
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-customer-service-2-line"></i>
+                                    </div>
+
+                                    <a href="#footer" class="nav-link-cf">
+                                        <span class="dropdown-title">Contact</span>
+                                    </a>
+                                    
+                                
+                                    <p class="dropdown-description dropdown-list">
+                                        Get connected with us!
+                                    </p>
+                                </div>
+                                <!-- Socials -->
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-survey-line"></i>
+                                    </div>
+
+                                    <a href="#quote-modal" class="nav-link-cf">
+                                        <span class="dropdown-title">Get a Free Quote!</span>
+                                    </a>
+                                
+                                    <p class="dropdown-description">
+                                        Fill out a request form in order to recieve a quote.
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </div>
         </nav>
     </header>
 
+    <!-- HERO SECTION  -->
+    <section class="hero-section" id="hero">
+        <div class="hero-section-container">
+            <img src="imgs/Howdy HS logo m1 copy.png" alt="Howdy-Home-Services-Logo">
+            
+            <div class="hero-heading">
+                <h2>We Don't Just Clean - We Bring Justice to Grime.</h2>
+                <p>Give your home a shine with HHS' afordable and exceptional exterior services.</p>
+                <a type="button" class="quote-btn nav-link-cf" href="#quote-modal">
+                    GET A FREE QUOTE
+                </a>
+            </div>
+            
+
+            <h2>We offer special discounts for</h2>
+            <div class="special-discounts" id="special-discounts">
+                <div class="discount-item">
+                    <div class="discount-icon">
+                        <img src="imgs/Elderly-Vector.svg" alt="">
+                    </div>
+                    <p>The Elderly</p>
+                </div>
+
+                <div class="discount-item">
+                    <div class="discount-icon">
+                        <img src="imgs/Disabled-Vector.svg" alt="">
+                    </div>
+                    <p>The Disabled</p>
+                </div>
+
+                <div class="discount-item">
+                    <div class="discount-icon">
+                        <img src="imgs/Veterans.svg" alt="">
+                    </div>
+                    <p>Our Veterans</p>
+                </div>
+
+                <div class="discount-item">
+                    <div class="discount-icon">
+                        <img src="imgs/Woman.svg" alt="">
+                    </div>
+                    <p>Single Parents/Widows</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" class="services-section">
         <h2>Our Services</h2>
-        <div class="service">
-            <h3>Gutter Cleaning</h3>
-            <p>Gutters collect all types of leaves, twigs, dirt, and Lord have mercy, so many 
-                pine-needles. A gutter after all of that is gonna overflow, just like 
-                a toilet after tacobell. The water that overflows from the gutters 
-                will often drip down
-                onto the fascia, causing water damage and rot.
-            </p>
+        <div class="services-section-container">
+        
+            
+
+            <div class="service serv-4">
+                <div class="service-content">
+                    <div class="service-icon-container">
+                        <img src="imgs/Pressure Wash-Vector.svg" alt="Pressure-Washing-Icon">
+                    </div>
+                    <h3>Pressure Washing</h3>
+                </div>
+                
+            </div>
+            
+            <div class="service">
+                <div class="service-content">
+                    <div class="service-icon-container">
+                        <img src="imgs/House-Vector.svg" alt="House-Washing-Icon">
+                    </div>
+
+                    <h3>House Washing</h3>
+
+                </div>
+                
+            </div>
+            <div class="service">
+                <div class="service-content">
+                    <div class="service-icon-container">
+                        <img src="imgs/rWash-vector.svg" alt="Roof-Washing-Icon">
+                    </div>
+
+                    <h3>Roof Washing</h3>
+                </div>
+                
+            </div>
+            <div class="service">
+                <div class="service-content">
+                    
+                    <div class="service-icon-container">
+                        <img src="imgs/Gutter-Vector.svg" alt="Gutter-Cleaning-Icon">
+                    </div>
+
+                    <h3>Gutter Cleaning</h3>
+
+                </div>
+                
+            </div>
+            <div class="service">
+                <div class="service-content">
+                    <div class="service-icon-container">
+                        <img src="imgs/Gutter-W-Vector.svg" alt="Gutter-Whitening-Icon">
+                    </div>
+
+                    <h3>Gutter Whitening</h3>
+
+                </div>
+                
+            </div>
+
+            <div class="service">
+                <div class="service-content">
+                    <div class="service-icon-container">
+                        <img src="imgs/Window-Vector.svg" alt="Window-Washing-Icon">
+                    </div>
+
+                    <h3>Window Washing</h3>
+
+                </div>
+                
+            </div>
+
+            <div class="service">
+                <div class="service-content">
+                    <div class="service-icon-container">
+                        <img src="imgs/Yard-Vector.svg" alt="Yard-Cleanup-Icon">
+                    </div>
+
+                    <h3>Yard Cleanup</h3>
+
+                </div>
+                
+            </div>
+
         </div>
-        <div class="service">
-            <h3>Gutter Whitening</h3>
-            <p>Ever notice the gnarly stripes and colored stains 
-                on the outside exterior edge of gutters? This staining 
-                almost never comes off by itself. Howdy HS special mix 
-                of eco-friendly chemicals eats these stains just like a 
-                hungry texan eats his BBQ Ribs...nothing but shiny white 
-                left behind</p>
-        </div>
-        <div class="service">
-            <h3>Pressure Washing</h3>
-            <p>When was the last time your driveway, sidewalk, or steps looked brand-new?
-                Call Howdy HS and it could be today!!...or, you know, whenever you want. 
-            </p>
-        </div>
-        <div class="service">
-            <h3>Soft Washing</h3>
-            <p>
-                Do you have algae, dirt, or moss stuck to the brick or siding of your house?
-                Thats a bummer, but you are not completely out of luck, becasue I could help
-                you get rid of it! A softwash treatment removes algae, mold, moss, dirt, and 
-                grime from the sides of your home without damaging the surfaces with high pressure.
-            </p>
-        </div>
-        <div class="service">
-            <h3>Window Washing</h3>
-            <p>Just like everything on a farm...I mean home or business...windows require 
-                regular maintenance. Keeping your windows clean extends the lifespan, helps 
-                minimize the chance of bugs creeping in, and brightens up your home...literally(they let more light in).
-                In addition to cleaning your windows, we clean your exterior window sills and frames, leaving the entire view outside looking amazing.
-            </p>
-        </div>
+        
+        
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Us</h2>
-        <p>My name is Logan and I decided to start Howdy Home Services to serve YOU! Serving others is 
-            one of my greatest passions and with Howdy HS I hope to be able to do 
-            a lot of it. To me, my customers are more than just a name and number, they
-            are partners. And a partner deserves every bit of quality service there
-            is to give. Be my partner in cleaning the west, one home at a time!
+        <h2>Cleaning Up the West One Home at a Time</h2>
+        <p>
+            Founded in 2025 by Logan Nelson, Howdy Home Services provides professional exterior cleaning and home maintenance services. 
+            HHS strives to give best effort, all-around service to each and every customer.
         </p>
     </section>
-    <!---<section id="gallery">
-        <h2>Gallery</h2>
-        <img src="gutter_tree.jpg" alt="">
-    </section> --->
-    <!-- Gallery -->
-    <section id="gallery">
+
+    <div class="section-divider">
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery-section">
         <h2>Gallery</h2>
         <div class="gallery-container">
-            <button id="prev-btn-g">&#10094;</button> <!-- Left arrow -->
-            <div class="gallery active">
-                <img src="imgs/gutter_tree.jpg" class="responsive" alt="">
+            <div class="gallery-images" id="gallery-images">
+                <img class="gallery gActive" id="slide-1" src="imgs/before-after (1).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-2" src="imgs/before-after (15).png" class="responsive" alt="">
+    
+                <img class="gallery" id="slide-3" src="imgs/before-after (18).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-4" src="imgs/before-after (25).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-5" src="imgs/before-after (28).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-6" src="imgs/before-after (30).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-7" src="imgs/before-after (33).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-8" src="imgs/before-after (41).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-9" src="imgs/before-after (44).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-10" src="imgs/before-after (47).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-11" src="imgs/before-after (5).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-12" src="imgs/before-after (51).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-13" src="imgs/before-after (7).png" class="responsive" alt="">
+                
+                <img class="gallery" id="slide-14" src="imgs/before-after.png" class="responsive" alt="">
+                
+
             </div>
-            <div class="gallery">
-                <img src="imgs/before-after (1).png" class="responsive" alt="">
+
+            <div class="gallery-scrollbar-container">
+                <button id="prev-btn-g" class="prev-btn-g" onclick="galleryPrev()">&#10094;</button> <!-- Left arrow -->
+
+                <div id="gallery-slider">
+                    <div id="slider-thumb"></div>
+                </div>
+                    
+            
+                
+                <button id="next-btn-g" onclick="galleryNext()">&#10095;</button> <!-- Right arrow -->
             </div>
-            <div class="gallery">
-                <img src="imgs/before-after (15).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (18).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (25).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (28).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (30).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (33).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (41).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (44).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (47).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (5).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (51).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after (7).png" class="responsive" alt="">
-            </div>
-            <div class="gallery">
-                <img src="imgs/before-after.png" class="responsive" alt="">
-            </div>
-            <button id="next-btn-g">&#10095;</button> <!-- Right arrow -->
         </div>
     </section>
 
+    <div class="section-divider">
+    </div>
+
+
+
+    <!-- Quote Form -->
+    <section id="quote-modal" class="modal container">
+        <div class="modal-content">
+            <h1 id="quote-form-h1">Request a Free Quote</h1>
+            <form id="quote-form" action="https://formsubmit.co/logan.nelson@howdyhome-services.com" method="POST" enctype=multipart/form-data>
+                <input type="hidden" name="_template" value="table">
+                
+                <!--Contact Details -->
+                <div class="contact-container">
+                    
+                    <h3 class="form-heading">Contact Details</h3>
+                    <div class="name-container">
+                        <div class="f-l-names form-line">
+                            <label class="form-label req-label" for="f-name" id="f-name-label">First Name</label>
+                            <input class="join-left" type="text" name="f-name" id="f-name" placeholder="e.g., Jane" required>
+
+                            <label class="form-label req-label" for="f-name" id="l-name-label">Last Name</label>
+                            <input class="join-right" type="text" name="l-name" id="l-name" placeholder="e.g., Doe" required>
+                        </div>
+                        <div class="form-line company-name-container">
+                            <label class="form-label" for="company-name">Company Name (if applicable)</label>
+                            <input type="text" name="company-name" id="comp-name" placeholder="e.g., Just Jane">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-line email-container">
+                        <label class="req-label form-label" for="email">Email</label>
+                        <input type="email" name="email" placeholder="e.g., jane@doe.com" required>
+                    </div>
+                    
+                    <div class="form-line phone-container">
+                        <label class="req-label form-label" for="phone">Phone number</label>
+                        <input type="tel" name="phone" placeholder="e.g., 832-555-5555" required>
+                    </div>
+                    
+
+                </div>
+                
+                
+
+                <!-- Address -->
+                <h3 class="form-heading">Address</h3>
+                <div class="address-container">
+                    <div class="form-line">
+                        <label class="req-label form-label" for="street-address">Street address</label><br>
+                        <input type="text" id="street-address" name="street-address" autocomplete="street-address" placeholder="e.g., 678 Southern Avenue" required enterkeyhint="next"></input>
+                    </div>
+                    
+                    
+                    <div class="city-zip-container form-line">
+                        
+                        <label class="req-label form-label" for="city">City</label><br>
+                        <input class="join-left" required type="text" id="city" name="city" autocomplete="address-level2" placeholder="e.g., Spring" enterkeyhint="next">
+
+                        <label class="req-label form-label zip-label" for="postal-code">ZIP or postal code</label>
+                        <input type="text" class="postal-code join-right" id="postal-code" name="postal-code" autocomplete="postal-code" placeholder="e.g., 77379" enterkeyhint="next" required>
+                        
+                    </div>
+                
+                </div>
+                
+                
+
+                <!-- Service -->
+                <div class="service-container">
+
+                    <h3 class="form-heading">Service Details</h3>
+                    
+                    <div class="form-line">
+                        <label class="req-label form-label" for="myselect">What Service(s) are you interested in?</label>
+                        <button type="button" class="sel-btn" id="sel-service-btn"  value="Select Service" onclick="openclose('myselect', 'sel-service-btn')">
+                            Select Service
+                            <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                        </button>
+                        <div role="button" name="service" class="invisible sel-opt-container" id="myselect" aria-required="true" multiple>
+                            
+                            <label class="cb-container form-label">Gutter Cleaning
+                                <input class="service-option" type="checkbox" value="Gutter Cleaning">
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                            <label class="cb-container form-label">Gutter Whitening
+                                <input class="service-option" type="checkbox" value="Gutter Whitening">
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                            <label class="cb-container form-label">Pressure Washing
+                                <input class="service-option" type="checkbox" value="Pressure Washing">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="cb-container form-label">Soft Washing
+                                <input class="service-option" type="checkbox" value="Soft Washing">
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                            <label class="cb-container form-label">Window Washing
+                                <inpu class="service-option" type="checkbox" value="Window Washing">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <div class="other-container form-label">
+                                <label class="cb-container">Other
+                                <input class="service-option" type="checkbox" id="other" onclick="toggleTextbox(this)">
+                                <span class="checkmark"></span>
+                            </label>
+                            <input type="text" class="hidden-input" id="service-option-other" placeholder="Enter other service" aria-label="Other Service">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <div class="s-detail-containe form-line">
+                        <label class="req-label form-label" id="details-label" for="details">Please provide as much information as you can</label>
+                        <textarea name="details" id="s-details" placeholder="Additional details, questions, specific requirements, or other relevant information." required></textarea>
+
+                    </div>
+
+                </div>
+                
+                
+                <!-- Availability -->
+                <div class="ar-time-container">
+                    <div class="ar-time-header">
+
+                        <h3 class="form-heading">Your Availability</h3>
+
+                        <div class="form-line">
+                            <label class="form-label" for="ar-times">What are your preferred arrival times? (optional)</label>
+                            <button type="button" class="sel-btn" id="sel-time-btn" value="Select Preferred Time" onclick="openclose('sel-ar-time', 'sel-time-btn')">
+                                Select Preferred Times
+                                <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+                            </button>
+                            
+                            <div role="button" class="invisible ar-times sel-opt-container" id="sel-ar-time" aria-required="false" multiple>
+
+                                <label class="cb-container form-label">Any time
+                                    <input class="ar_time-option" type="checkbox" value="Any Time">
+                                    <span class="checkmark"></span>
+                                </label>
+
+
+                                <label class="cb-container form-label">Morning
+                                    <input class="ar_time-option" type="checkbox" value="Morning">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="cb-container form-label">Afternoon
+                                    <input class="ar_time-option" type="checkbox" value="Afternoon">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="cb-container form-label">Evening
+                                    <input class="ar_time-option" type="checkbox" value="Evening">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                </div>
+                
+
+                
+                <!-- Engagement -->
+                <h3 class="form-heading">How did you find us?</h3>
+
+                <div class="form-line">
+                    <label class="req-label form-label" for="engagement-container">From what source did you hear about us?</label>
+                    <button type="button" class="sel-btn" id="sel-eng-btn" value="Select Engagement Source" onclick="openclose('sel-eng', 'sel-eng-btn')">
+                        Select Engagement Source
+                        <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+
+                    </button>
+                    <div role="button" name="engagement" id="sel-eng" class="invisible engagement-container sel-opt-container" aria-required="true">
+
+                        <label class="cb-container form-label">Facebook Group
+                            <input class="eng-option" type="checkbox" value="Facebook Group">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="cb-container form-label">Facebook Ad
+                            <input class="eng-option" type="checkbox" value="Facebook Ad">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="cb-container form-label">Nextdoor
+                            <input class="eng-option" type="checkbox" value="Nextdoor">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="cb-container form-label">Google
+                            <input class="eng-option" type="checkbox" value="Google">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="cb-container form-label">Yard Sign
+                            <input class="eng-option" type="checkbox" value="Yard Sign">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="cb-container form-label">Yelp
+                            <input class="eng-option" type="checkbox" value="Yelp">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="cb-container form-label">Referral
+                            <input class="eng-option" type="checkbox" value="Referral">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="cb-container form-label">Email
+                            <input class="eng-option" type="checkbox" value="Email">
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <div class="other-container form-label">
+                            <label class="cb-container">Other
+                            <input class="eng-option" type="checkbox" id="otherEng" onclick="toggleTextbox(this)">
+                            <span class="checkmark"></span>
+                            </label>
+                            <input type="text" class="hidden-input" id="eng-option-other" placeholder="Enter other source" aria-label="Other Engagement">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <h3 class="form-heading">Upload Images (optional)</h3>
+
+                <div id="upload-img-container" class="form-line">
+                    <label for="attachment" class="custom-file-upload form-label">Share images of the work to be done (currently limited to 1 upload)</label>
+                    <button type="button" id="imgUpload-btn" onclick="document.getElementById('imgUpload').click()">Select Image</button>
+                    <input id="imgUpload" name="attachment" type="file" style="display:none" accept="image/*">
+                    <img id="upload-preview" class="upload-preview" style="display: none;" />
+                    
+                    <!--<button type="button" onclick="addImageInput()">Add Another Image</button>-->
+                </div>
+
+
+
+                <input type="hidden" name="Selected-Services" id="selected-services">
+                <input type="hidden" name="Arrival-Times" id="selected-ar-times">
+                <input type="hidden" name="Selected-Engagement" id="selected-engagement">
+                
+                <input type="hidden" name="_autoresponse" id="autoresponse">
+                <!--   <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">    -->
+                <div class="form-line">
+                    <button id="submit-btn" type="submit">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+
+    <div class="section-divider">
+    </div>
+    
+
+
+
+
     <!-- Testimonials Section -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonial-section">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-container">
-            <button id="prev-btn-t">&#10094;</button> 
+            <button class="prev-btn-t" id="prev-btn-t">&#10094;</button> 
             <div class="testimonial active">
                 <p>"awesome job! Cleaned my gutters and power washed my house and drive way. Very respectful, highly recommend this man!"</p>
                 <h3>- Graham W.</h3>
@@ -150,6 +694,16 @@
             <div class="testimonial">
                 <p>"Logan was extremely professional, he showed up on time and prepared. I would recommend his services to anyone and would use him again if needed. Don't hesitate to give him a call."</p>
                 <h3>- Monica Q.</h3>
+            </div>
+
+            <div class="testimonial">
+                <p>"Logan did a great job cleaning our gutters, as well as the algae and other weather-related residue. He was quick, professional, and reasonably priced. We definitely recommend."</p>
+                <h3>- Andrea J.</h3>
+            </div>
+
+            <div class="testimonial">
+                <p>"Logan with Howdy Home Services was on time, professional and did a perfect job power washing our drive, eaves, and curbs. Our house was built in 1994 and the driveway looks brand new!! I would highly recommend Logan to anyone who wants to improve the value and over all beautification of their property!"</p>
+                <h3>- Sherry M.</h3>
             </div>
 
             <!--
@@ -168,297 +722,136 @@
         </a>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        
-        
-        <div id="socials">
-            <a href="https://www.facebook.com/people/Howdy-Home-Services/61573940098477/?_rdr">
-                <img src="imgs/facebook-svg.svg" class="sc-icon" id="fb-icon">
-            </a>
+    <div class="section-divider">
+    </div>
 
-            <a href="https://www.instagram.com/howdy_homeservices/">
-                <img src="imgs/Instagram-svg.svg" class="sc-icon" id="insa-icon" alt="">
-            </a>
-            
-        </div>
-        
-        <div class="phone-container">
-           <!-- <img src="imgs/Phone-call-Icon.png" alt="" id="phone-icon"> --> 
-            <p>(832) 298-5499</p>
-        </div>                                       
-        <div class="email-container">                                                                           
-            <!-- <img src="imgs/Email-Icon.png" alt="" id="email-icon"> -->  
-            <p>logan.nelson@howdyhome-services.com</p>
-        </div>
-
-    </section>
-
-    <!-- Quote Form Modal -->
-    <div id="quote-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-container">
-                <span class="close">&times;</span>
-                <h2>Request a Quote</h2>
-                <form id="quote-form" action="https://formsubmit.co/logan.nelson@howdyhome-services.com" method="POST" enctype=multipart/form-data>
-                    <input type="hidden" name="_template" value="table">
+    <footer class="footer-container" id="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-info">
                     
-                    <!--Contact Details -->
-                    
-                    <h3>Contact Details</h3>
-                    <div class="form-line">
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="customer-name" required>
-                    </div>
-                    
-                    <div class="form-line">
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-line">
-                        <label for="phone">Phone number:</label>
-                        <input type="tel" name="phone" required>
-                    </div>
-                    
-                    
+                    <div class="footer-group footer-contact">
+                        <h3>Contact</h3>
 
-                    <!-- Address -->
-                    <h3>Address</h3>
-                    <div class="form-line">
-                        <label for="street-address">Street address</label>
-                        <input type="text" id="street-address" name="street-address" autocomplete="street-address" required enterkeyhint="next"></input>
-                    
-                    </div>
-                    <div class="form-line">
-                        <label for="postal-code">ZIP or postal code (optional)</label>
-                        <input type="text" class="postal-code" id="postal-code" name="postal-code" autocomplete="postal-code" enterkeyhint="next">
-                    </div>
-                    <div class="form-line">
-                        <label for="city">City</label>
-                        <input required type="text" id="city" name="city" autocomplete="address-level2" enterkeyhint="next">
-                    </div>
-
-                    <!-- Service -->
-                    <h3>Service Details</h3>
-
-                    <div class="form-line">
-                        <label for="myselect">What Service(s) are you interested in?</label>
-                        <button type="button" class="sel-btn" id="sel-service-btn" value="Select Service" onclick="openclose('myselect')">
-                            Select Service
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
-                            <path fill="#ffffff" opacity="1.000000" stroke="none" 
-                                d="
-                            M38.747475,27.752295 
-                                C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
-                                C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
-                                C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
-                                C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
-                                C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
-                                C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
-                                C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
-                            z"/>
-                            </svg>
-
-                        </button>
-                        <div role="button" name="service" class="invisible sel-opt-container" id="myselect" aria-required="true" multiple>
-                            
-                            <label class="cb-container">Gutter Cleaning
-                                <input class="service-option" type="checkbox" value="Gutter Cleaning">
-                                <span class="checkmark"></span>
-                            </label>
-                            
-                            <label class="cb-container">Gutter Whitening
-                                <input class="service-option" type="checkbox" value="Gutter Whitening">
-                                <span class="checkmark"></span>
-                            </label>
-                            
-                            <label class="cb-container">Pressure Washing
-                                <input class="service-option" type="checkbox" value="Pressure Washing">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="cb-container">Soft Washing
-                                <input class="service-option" type="checkbox" value="Soft Washing">
-                                <span class="checkmark"></span>
-                            </label>
-                            
-                            <label class="cb-container">Window Washing
-                                <inpu class="service-option" type="checkbox" value="Window Washing">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <div class="other-container">
-                                <label class="cb-container">Other
-                                <input class="service-option" type="checkbox" id="other" onclick="toggleTextbox(this)">
-                                <span class="checkmark"></span>
-                            </label>
-                            <input type="text" class="hidden-input" id="service-option-other" placeholder="Enter other service" aria-label="Other Service">
+                        <div class="footer-contact-items">
+                            <div class="footer-contact-item">
+                                <i class="ri-map-pin-line"></i>
+                                <p>Spring, Tx</p>
                             </div>
-                            
+
+                            <div class="footer-contact-item">
+                                <i class="ri-phone-line"></i>
+                                <p>832.298.5499</p>
+                            </div>
+
+                            <div class="footer-contact-item">
+                                <i class="ri-mail-line"></i>
+                                <p>logan.nelson@howdyhome-services.com</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="form-line">
-                        <label for="details">Please provide as much information as you can:</label>
-                        <textarea name="details" id="s-details" required></textarea>
-                    </div>
-                    
-                    
-
-                    <h3>Your Availability</h3>
-                            
-
-                            <div class="form-line">
-                                <label for="ar-times">What are your preferred arrival times? (optional)</label>
-                                <button type="button" class="sel-btn" id="sel-time-btn" value="Select Preferred Time" onclick="openclose('sel-ar-time')">
-                                    Select Preferred Times
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
-                                        <path fill="#ffffff" opacity="1.000000" stroke="none" 
-                                            d="
-                                        M38.747475,27.752295 
-                                            C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
-                                            C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
-                                            C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
-                                            C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
-                                            C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
-                                            C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
-                                            C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
-                                        z"/>
-                                    </svg>
-                                </button>
-                                <div role="button" class="invisible ar-times sel-opt-container" id="sel-ar-time" aria-required="false" multiple>
-
-                                    <label class="cb-container">Any time
-                                        <input class="ar_time-option" type="checkbox" value="Any Time">
-                                        <span class="checkmark"></span>
-                                    </label>
-
-
-                                    <label class="cb-container">Morning
-                                        <input class="ar_time-option" type="checkbox" value="Morning">
-                                        <span class="checkmark"></span>
-                                    </label>
-
-                                    <label class="cb-container">Afternoon
-                                        <input class="ar_time-option" type="checkbox" value="Afternoon">
-                                        <span class="checkmark"></span>
-                                    </label>
-
-                                    <label class="cb-container">Evening
-                                        <input class="ar_time-option" type="checkbox" value="Evening">
-                                        <span class="checkmark"></span>
-                                    </label>
-
-                                </div>
-
-                            </div>
-                    
-                    
-                    <h3>How did you find us?</h3>
-
-                    <div class="form-line">
-                        <label for="engagement-container">From what source did you hear about us?</label>
-                        <button type="button" class="sel-btn" id="sel-eng-btn" value="Select Engagement Source" onclick="openclose('sel-eng')">
-                            Select Engagement Source
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            width="10%" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
-                            <path fill="#ffffff" opacity="1.000000" stroke="none" 
-                                d="
-                            M38.747475,27.752295 
-                                C42.804241,23.567064 46.610432,19.631266 50.596733,15.509218 
-                                C52.501961,17.669525 54.087582,19.467438 55.439613,21.000488 
-                                C47.409294,29.043001 39.112553,37.352341 31.112591,45.364449 
-                                C23.111868,37.360638 14.809991,29.055555 6.264977,20.507242 
-                                C7.662890,19.464682 9.599699,18.020214 11.599207,16.528986 
-                                C17.306433,22.390738 23.547136,28.800411 30.233898,35.668221 
-                                C33.339348,32.786953 35.918125,30.394337 38.747475,27.752295 
-                            z"/>
-                            </svg>
-
-                        </button>
-                        <div role="button" name="engagement" id="sel-eng" class="invisible engagement-container sel-opt-container" aria-required="true">
-
-                            <label class="cb-container">Facebook Group
-                                <input class="eng-option" type="checkbox" value="Facebook Group">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="cb-container">Facebook Ad
-                                <input class="eng-option" type="checkbox" value="Facebook Ad">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="cb-container">Nextdoor
-                                <input class="eng-option" type="checkbox" value="Nextdoor">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="cb-container">Google
-                                <input class="eng-option" type="checkbox" value="Google">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="cb-container">Yard Sign
-                                <input class="eng-option" type="checkbox" value="Yard Sign">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="cb-container">Yelp
-                                <input class="eng-option" type="checkbox" value="Yelp">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="cb-container">Referral
-                                <input class="eng-option" type="checkbox" value="Referral">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="cb-container">Email
-                                <input class="eng-option" type="checkbox" value="Email">
-                                <span class="checkmark"></span>
-                            </label>
-                            
-                            <div class="other-container">
-                                <label class="cb-container">Other
-                                <input class="eng-option" type="checkbox" id="otherEng" onclick="toggleTextbox(this)">
-                                <span class="checkmark"></span>
-                                </label>
-                                <input type="text" class="hidden-input" id="eng-option-other" placeholder="Enter other source" aria-label="Other Engagement">
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                    
-
-                    <h3>Upload Images (optional)</h3>
-                    <div id="upload-img-container" class="form-line">
-                        <label for="imgUpload" class="custom-file-upload">Share images of the work to be done (currently limited to 1 upload)</label><br><br>
-                        <input name="attachment" type="file" id="imgUpload" multiple accept="image/*"><br><br>
-                        <img id="upload-preview" class="upload-preview" style="display: none;" />
                         
-                        <!--<button type="button" onclick="addImageInput()">Add Another Image</button>-->
+
                     </div>
 
+                </div>
 
-
-
-                    <input type="hidden" name="Selected-Engagement" id="selected-engagement">
-                    <input type="hidden" name="Arrival-Times" id="selected-ar-times">
-                    <input type="hidden" name="Selected-Services" id="selected-services">
-                    <input type="hidden" name="_autoresponse" id="autoresponse">
-                    <!--   <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">    -->
-                    <button id="submit-btn" type="submit">Submit</button>
-                </form>
+                <div class="footer-img">
+                    <img id="footer-img" src="imgs/Howdy HS logo m1 copy.png" alt="Howdy-Home-Services-Logo">
+                </div>
 
             </div>
-            
+
+            <div class="footer-divider">
+                <div class="footer-divider-line"></div>
+            </div>
+
+            <div class="footer-socials">
+                <a href="#">
+                    <i class="ri-facebook-box-line"></i>
+                </a>
+
+                <a href="#">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                <a href="#">
+                    <svg class="yelp-icon" viewBox="-0.5 -0.5 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" id="Yelp--Streamline-Iconoir" height={16} width={16} ><desc>{"Yelp Streamline Icon: https://streamlinehq.com"}</desc><path d="m7.1373750000000005 6.8265625 -0.31981250000000006 -5.7564375000000005c-0.015 -0.27075 -0.27925 -0.45618749999999997 -0.539 -0.37825L3.8636874999999997 1.416375c-0.277375 0.0831875 -0.3888125 0.415875 -0.21756250000000002 0.6493749999999999l3.49125 4.7608125Z" stroke="#f4f4f4" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} /><path d="m8.8839375 7.874499999999999 3.192125 -0.5804374999999999c0.3024375 -0.0549375 0.44475 -0.405875 0.26606250000000004 -0.656l-1.0093125 -1.413125c-0.17056249999999998 -0.23875000000000002 -0.5271875 -0.233 -0.6899375000000001 0.011125l-1.7589374999999998 2.6384374999999998Z" stroke="#f4f4f4" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} /><path d="m9.23325 10.319624999999998 1.4431875 2.8865000000000003c0.139375 0.27868750000000003 0.5233125000000001 0.3133125 0.7103125 0.064l1.2819375 -1.70925c0.18693749999999998 -0.2493125 0.04625 -0.6081875 -0.260375 -0.6639375000000001l-3.1750625 -0.5773125Z" stroke="#f4f4f4" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} /><path d="M7.1373750000000005 10.6689375 4.80325 13.003125c-0.2155625 0.2155625 -0.13625 0.581875 0.1491875 0.688875l1.618625 0.607c0.2740625 0.10275 0.5663125 -0.09987499999999999 0.5663125 -0.3925v-3.2375625Z" stroke="#f4f4f4" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} /><path d="m5.7401875 8.922437500000001 -2.8865000000000003 -1.4431875c-0.27868750000000003 -0.139375 -0.606625 0.06325 -0.606625 0.374875v1.8464375c0 0.2965625 0.2995625 0.49924999999999997 0.574875 0.3891875l2.91825 -1.1673125Z" stroke="#f4f4f4" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} /></svg>
+                </a>
+            </div>
+
+            <p class="footer-title">
+                © 2025 HOWDY HOME SERVICES. ALL RIGHTS RESERVED.
+            </p>
+
+            <p class="footer-note">
+                MADE BY LOGAN NELSON
+            </p>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </footer>
+
+    
+
+
+    <!-- Google Maps Api Autocomplete -->
+    <script >
+        function initMap() {
+        // Your code that uses the google object
+            const options = {
+                fields: ["address_components", "geometry", "name"],
+                strictBounds: false,
+            };
+
+            const searchInput = document.getElementById("street-address");
+            const cityInput = document.getElementById("city");
+            const zipInput = document.getElementById("postal-code");
+
+
+
+            const autocomplete = new google.maps.places.Autocomplete(searchInput, options);
+            
+            function addressComponents() {
+                const place = autocomplete.getPlace();
+                let streetAddress = "";
+                let postalCode = "";
+                let city = "";
+
+                for (const component of place.address_components) {
+                    const componentType = component.types[0];
+
+                    switch (componentType) {
+                    case "street_number":
+                        streetAddress = `${component.long_name} ${streetAddress}`;
+                        break;
+                    case "route":
+                        streetAddress += component.long_name;
+                        break;
+                    case "locality":
+                        city = component.long_name;
+                    case "postal_code":
+                        postalCode = component.long_name;
+                        break;
+                    }
+                }
+
+                const adComps = [streetAddress, city, postalCode];
+
+                return adComps;
+            }
+            
+
+
+            autocomplete.addListener('place_changed', () => {
+                let myAddress = addressComponents();
+                searchInput.value = myAddress[0];
+                cityInput.value = myAddress[1];
+                zipInput.value = myAddress[2];
+            });
+
+        }
+
+        window.initMap = initMap;
+        
+    </script>
+
 </body>
 </html>
