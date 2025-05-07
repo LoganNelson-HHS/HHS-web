@@ -115,6 +115,19 @@
     transition: .2s;
 }
 
+.alegreya-sc-regular {
+    font-family: "Alegreya SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.familjen-grotesk {
+    font-family: "Familjen Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 
 .form-label {
@@ -126,15 +139,22 @@
 } */
 h4 {
     color: var(--white-color);
+    font-family: "Alegreya SC", serif;
 }
 h3{
     color: var(--white-color);
+    font-family: "Alegreya SC", serif;
 }
 h2{
     color: var(--white-color);
+    font-family: "Alegreya SC", serif;
 }
 h1{
     color: var(--btn-color-light);
+}
+
+p {
+    font-family: "Familjen Grotesk", sans-serif;
 }
 
 
@@ -842,9 +862,7 @@ a {
     font-size: var(--info-title-font-size);
     font-weight: var(--font-bold);
     line-height: 2rem;
-    color: var(--brown-color);
-    color: var(--btn-color-light);
-    color: var(--blue-color-light);
+    color: var(--gray-color-dark);
 }
 
 .footer-links {
